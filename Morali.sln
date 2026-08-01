@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morali.API", "Morali.API\Morali.API.csproj", "{402187C0-8DBE-46D7-8DFD-70C22E9167C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morali.Application", "Morali.Application\Morali.Application.csproj", "{F4A22B7C-6DA5-49C9-8482-22BF17CD58B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morali.Domain", "Morali.Domain\Morali.Domain.csproj", "{5A7223A4-E30D-4004-B3A9-47F9E2242476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Morali.Infrastructure", "Morali.Infrastructure\Morali.Infrastructure.csproj", "{5D051881-E9B3-413B-849D-81399C18EF14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402187C0-8DBE-46D7-8DFD-70C22E9167C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402187C0-8DBE-46D7-8DFD-70C22E9167C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402187C0-8DBE-46D7-8DFD-70C22E9167C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402187C0-8DBE-46D7-8DFD-70C22E9167C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A22B7C-6DA5-49C9-8482-22BF17CD58B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A22B7C-6DA5-49C9-8482-22BF17CD58B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A22B7C-6DA5-49C9-8482-22BF17CD58B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A22B7C-6DA5-49C9-8482-22BF17CD58B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7223A4-E30D-4004-B3A9-47F9E2242476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7223A4-E30D-4004-B3A9-47F9E2242476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7223A4-E30D-4004-B3A9-47F9E2242476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7223A4-E30D-4004-B3A9-47F9E2242476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D051881-E9B3-413B-849D-81399C18EF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D051881-E9B3-413B-849D-81399C18EF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D051881-E9B3-413B-849D-81399C18EF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D051881-E9B3-413B-849D-81399C18EF14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
