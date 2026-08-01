@@ -5,26 +5,12 @@ using Morali.Extensions;
 using Morali.Infrastructure;
 using Morali.Middlewares;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Morali;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSwaggerGen();
 builder.Services
-    .AddControllers(cfg =>
-    {
-        cfg.Conventions.Add(new RouteTokenTransformerConvention(new KebabCaseParameterTransformer()));
-    })
-    .ConfigureApiBehaviorOptions(options =>
-    {
-        options.SuppressModelStateInvalidFilter = true;
-    })
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.SnakeCaseUpper));
-    });
-builder.Services.AddEndpointsApiExplorer();
-builder.Services
+    .AddAPI()
     .AddApplication(builder.Configuration)
     .AddInfrastructure(builder.Configuration);
 
