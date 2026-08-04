@@ -23,6 +23,7 @@ public class GetNeighborhoodQueryHandler : IRequestHandler<GetNeighborhoodQuery,
             .Where(p => p.City == request.city)
             .Select(p => p.Neighborhood)
             .Distinct()
+            .AsNoTracking()
             .ToArrayAsync(cancellationToken);
 
         return new Result<IEnumerable<string>>().Ok(result);

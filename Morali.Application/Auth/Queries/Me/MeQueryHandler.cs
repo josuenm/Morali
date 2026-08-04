@@ -22,7 +22,10 @@ public class MeQueryHandler : IRequestHandler<MeQuery, Result<MeQueryResponse>>
 
         if (userId is null) return new Result<MeQueryResponse>().Unauthorized("Acesso negado");
         
-        var user = await _db.Users.FirstOrDefaultAsync(u => u.Id == userId.Value, cancellationToken);
+        var user = await _db.Users
+            .AsNoTracking()
+            .FirstOrDefaultAsync(u => u.Id == userId.Value, cancellationToken);
+
         if (user is null) return new Result<MeQueryResponse>().NotFound("Usuário não encontrado");
         
         return new Result<MeQueryResponse>().Ok(new(user.Name, user.Email));

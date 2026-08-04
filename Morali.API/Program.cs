@@ -1,10 +1,6 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using Morali.Application;
-using Morali.Extensions;
 using Morali.Infrastructure;
 using Morali.Middlewares;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Morali;
 
 var builder = WebApplication.CreateBuilder(args);

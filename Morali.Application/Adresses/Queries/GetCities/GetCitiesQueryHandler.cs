@@ -19,6 +19,7 @@ public class GetCitiesQueryHandler : IRequestHandler<GetCitiesQuery, Result<IEnu
         var result = await _db.Properties
             .Select(p => p.City)
             .Distinct()
+            .AsNoTracking()
             .ToArrayAsync(cancellationToken);
         
         return new Result<IEnumerable<string>>().Ok(result);

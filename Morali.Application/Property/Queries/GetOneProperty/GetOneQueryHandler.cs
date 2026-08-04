@@ -20,10 +20,12 @@ public class GetOneQueryHandler : IRequestHandler<GetOneQuery, Result<PropertyRe
         CancellationToken cancellationToken
     )
     {
-        var property = await _db.Properties.FirstOrDefaultAsync(
-            p => p.Id == request.Id, 
-            cancellationToken
-        );
+        var property = await _db.Properties
+            .AsNoTracking()    
+            .FirstOrDefaultAsync(
+                p => p.Id == request.Id, 
+                cancellationToken
+            );
 
         if (property == null) return new Result<PropertyResponse>()
             .NotFound("Propriedade não encontrada");
